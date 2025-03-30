@@ -27,10 +27,14 @@ import os
 import pandas as pd
 import streamlit as st
 
-# Updated File Path
-file_path = r"G:\Shared drives\list 10\All_Sheets.xlsx"
+#----------------------------------------------------------------------------------------------------------
+# --- Authenticate using Service Account JSON ------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------
 
-# Sheet Mapping
+gc = gspread.service_account(filename=r"C:\Users\56928\Downloads\voltaic-mantra-402407-7c1cc38df5d6.json")
+spreadsheet = gc.open_by_key("13lD9l0vvEspPtgb-efKch6m5Cjap-5OtyR48XsqZDTs")
+
+# --- Sheet Mapping ---
 sheet_mapping = {
     "Open - Complaint - SR": "Complaint-Final",
     "Open Sites": "Open Sites-Final",
@@ -40,21 +44,31 @@ sheet_mapping = {
     "Reorder": "Reorder"
 }
 
-# Function to load data from Excel
+
+
+# -----------------------------------------------------------------------------------------------------------------
+# 2️⃣ Load Data from Google Sheets
+# -----------------------------------------------------------------------------------------------------------------
+
+
 def load_data(sheet_name):
-    """Loads only non-empty rows and columns from an Excel sheet."""
+    """Loads only non-empty rows and columns from Google Sheets."""
     try:
-        if not os.path.exists(file_path):
-            st.error(f"❌ File not found: {file_path}")
-            return pd.DataFrame()
-        
-        df = pd.read_excel(file_path, sheet_name=sheet_name, engine='openpyxl')
-        
+        sheet = spreadsheet.worksheet(sheet_name)
+        data = sheet.get_all_values()
+
+        # Convert to DataFrame
+        df = pd.DataFrame(data)
+
         # Remove completely empty rows
-        df = df.dropna(how='all').reset_index(drop=True)
+        df = df.loc[~df.apply(lambda row: all(cell == "" for cell in row), axis=1)].reset_index(drop=True)
 
         # Remove completely empty columns
         df = df.dropna(axis=1, how="all")
+
+        # Set headers from the first row
+        df.columns = df.iloc[0].str.strip()
+        df = df.drop(0).reset_index(drop=True)
 
         # Ensure necessary columns exist
         for col in ["Clearance Date", "Remarks", "Support Required"]:
@@ -62,21 +76,19 @@ def load_data(sheet_name):
                 df[col] = ""
 
         return df
-    
     except Exception as e:
-        st.markdown(
-            f"<p style='font-size:8px; color: red;'>⚠️ Unable to load sheet: {sheet_name}. ({e})</p>", 
-            unsafe_allow_html=True
-        )
+        st.markdown(f"<p style='font-size:8px; color: red;'>⚠️ Unable to load sheet: {sheet_name}. ({e})</p>", 
+                    unsafe_allow_html=True)  # Smaller text for warnings
         return pd.DataFrame()
 
-# Load all sheets into df_mapping (only if they contain data)
-df_mapping = {key: df for key, sheet in sheet_mapping.items() if not (df := load_data(sheet)).empty}
+# Load all sheets into df_mapping (only where data is present)
+df_mapping = {
+    key: df for key, sheet in sheet_mapping.items() if not (df := load_data(sheet)).empty
+}
 
-# Load Users sheet separately
-df_users = load_data("Users")
-df_users = df_users if not df_users.empty else None
 
+# Load Users sheet separately if it has data
+df_users = load_data("Users") if not load_data("Users").empty else None
 
 
 
@@ -115,6 +127,7 @@ def get_users_by_type(user_type):
 # Ensure session state keys exist
 if "authenticated" not in st.session_state:
     st.session_state["authenticated"] = False
+
 
 
 
