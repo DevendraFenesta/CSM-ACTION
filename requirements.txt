@@ -1,9 +1,25 @@
-streamlit
-pandas
-numpy
-matplotlib
-plotly
-requests
-openpyxl  # For reading/writing .xlsx files
-xlrd  # For reading .xls files
-gspread
+# Streamlit for the web app
+streamlit  
+
+# Data handling
+pandas  
+numpy  
+
+# Visualization
+matplotlib  
+plotly  
+
+# API requests
+requests  
+
+# Excel file handling
+openpyxl  # For reading/writing .xlsx files  
+xlrd  # For reading .xls files  
+xlsxwriter  # For exporting to Excel  
+
+# Google Drive access  
+gspread  # Google Sheets API  
+google-auth  # Authentication for Google APIs  
+google-auth-oauthlib  
+google-auth-httplib2  
+google-api-python-client  
