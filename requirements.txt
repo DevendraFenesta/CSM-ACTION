@@ -6,3 +6,4 @@ plotly
 requests
 openpyxl  # For reading/writing .xlsx files
 xlrd  # For reading .xls files
+gspread
