@@ -6,3 +6,4 @@ google-auth
 openpyxl
 pillow
 requests
+json
