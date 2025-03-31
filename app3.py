@@ -32,7 +32,7 @@ st.markdown(
 
 
 
-gc = gspread.service_account(filename=r"G:\My Drive\Colab Notebooks\voltaic-mantra-402407-7c1cc38df5d6.json")
+gc = gspread.service_account(filename=r"https://github.com/DevendraFenesta/CSM-ACTION/blob/main/.devcontainer/voltaic-mantra-402407-7c1cc38df5d6.json")
 spreadsheet = gc.open_by_key("13lD9l0vvEspPtgb-efKch6m5Cjap-5OtyR48XsqZDTs")
 
 # --- Sheet Mapping ---
