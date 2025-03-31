@@ -23,13 +23,14 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-import os
-import pandas as pd
-import streamlit as st
+
 
 #----------------------------------------------------------------------------------------------------------
 # --- Authenticate using Service Account JSON ------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------
+
+
+
 
 gc = gspread.service_account(filename=r"G:\My Drive\Colab Notebooks\voltaic-mantra-402407-7c1cc38df5d6.json")
 spreadsheet = gc.open_by_key("13lD9l0vvEspPtgb-efKch6m5Cjap-5OtyR48XsqZDTs")
@@ -38,7 +39,7 @@ spreadsheet = gc.open_by_key("13lD9l0vvEspPtgb-efKch6m5Cjap-5OtyR48XsqZDTs")
 sheet_mapping = {
     "Open - Complaint - SR": "Complaint-Final",
     "Open Sites": "Open Sites-Final",
-    "Stock Liquidation-Project": "Project Stock at Site-Final",
+    "Stock Liquidation Project": "Project Stock at Site-Final",
     "Drawing Hold Status": "WCS-Final",
     "FG Status": "FG-Final",
     "Reorder": "Reorder"
@@ -127,7 +128,6 @@ def get_users_by_type(user_type):
 # Ensure session state keys exist
 if "authenticated" not in st.session_state:
     st.session_state["authenticated"] = False
-
 
 
 
@@ -531,4 +531,4 @@ def save_to_google_sheet(df, selected_tab):
 
 # --- Save Button ---
 if st.button("💾 Save Data"):
-    save_to_google_sheet(edited_df, selected_tab)  # Save the selected tab's data to the relevant "Clear" sheet
+    save_to_google_sheet(edited_df, selected_tab)  # Save the selected tab's data to the relevant "Clear" sheet     modify this code with the main google sheet with the file path "G:\Shared drives\list 10\All_Sheets.xlsx"
