@@ -1,26 +1,8 @@
-streamlit  
-pandas  
-numpy  
-matplotlib  
-plotly  
-requests  
-openpyxl  # For reading/writing .xlsx files  
-xlrd  # For reading .xls files  
-xlsxwriter  # For exporting to Excel  
-gspread  # Google Sheets API  
-google-auth  # Authentication for Google APIs  
-google-auth-oauthlib  
-google-auth-httplib2  
-google-api-python-client  
-PyDrive  # Google Drive API  
-oauth2client  # OAuth authentication for Google APIs  
-pydrive  
-google-colab  
-pandas==0.24.2
-numpy==1.16.5
-openpyxl==2.6.4
-xlrd==1.2.0
-google-auth==1.34.0
-gspread==3.1.0
-datetime
-
+streamlit
+pandas
+numpy
+gspread
+google-auth
+openpyxl
+pillow
+requests
