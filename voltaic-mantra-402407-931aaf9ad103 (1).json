@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "voltaic-mantra-402407",
+  "private_key_id": "931aaf9ad1037bd3c48b8cd2f8421cdc9a8d3af5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDb//X7XB6BlwL\nGfcSMijZMW/cg5IFBKMYwlySjfuFAIIWiG9tr3rqp+W9iO6LuU6PqfXiX6eJ2Y5g\ntF6robVyW2pDQmDoN7CebWatF0YfgxAu8WyhdDjvePmh6WmSi+qYT2whNf3Wvvyr\nv2OE4Q/Pj7vSP8SXcyiQVzpKzn+EpnFqF1PTg1NaI7mvKYPvboENn4Tj0oW/5cTp\nSiaVQ3bUsAhiNj/k+Orab3dYyS1CEzsbE3YmhCDsqLOgjs9TST5FzGKcZBIVXGuQ\n2ww0Rkyj1h85YNlimyuZ2KP6mFGrO+huMNiGPiw2cNJsZEDd5Jjvo/tVoO2XD8CV\nHXHBXpobAgMBAAECggEAB1FsTRORAKC4VZoVTFMggHF/dMxgbVutF8I/YSV745EP\nTfSx53OIsLy0t5InDIhVzr9Ye6+FQH4q/KgEW3zkpHGT2wzjQA7FyEjkbVrPv2JS\n+s8DeFA3yY/IGS36TAh9MlLXA69X3/Cq2WuDOHiM9QK2z7qfi+Q+ApmhjyeIUtkv\n6ZdB3Bzq+FHY7QHCB3Bsqn+oLL/7JeofQ6F/R65dpDd/Qzg7bRzI5z/SJN6VLUnG\nrzuZ6+G0Y4+asE4Bk8Gd2HqY4hKfe9p1IS5JgfC25i/eceAu1hc28ikm1s1iOuE7\nEV0P4RTm3GDnUfPM4IHWZpQc/1+NWXtChOXoLFuvkQKBgQDg+0Z0j20qUkUdJtxQ\nJATw/1UqH/wVVSqbGMVzHV8vhCOMqQGjBrK8e1Wat7cIySTqJbmZk4k8m7LB7TmV\nR+OSqi0Su7jIaGNQLZ7CvaAyfk6bJ4QATl01Y2ZRYyDU/f+qw0+rTuQtWty60y18\n/Fv+R19i4CfDq+A+g8/lZ1FJ9QKBgQDeYfeHE89RlhN5zyrgoaMi12J8haWg1QEk\nn9N4t8Wt53wOHPzWusiULwncI8/KWpQv42DVvjUS61qw0sPRVSF8p3fyIPs+Jp2e\n3i9Hj975Fm1ewAK++Hzc0upk9OnsD/pRAkkoZwxjScOxfBiid3hxuHz451Uz01ZQ\nmor8J5N5zwKBgQCOccm8BwthHlGwEWiwPP378E3lq/aZMyEUrexl5BTeKtWvO1pT\n8+u6toQOv37dyyzaKySF/gmIHDRj4GTzBV8q/yAmmkB2ctFedGPufM0u6xWt2qkS\n4IrXQKYJpa+l62OypJKOrhZ+OOdESmykk8tTBbF5Et9aXjpOmnpIjs/C+QKBgHjX\n6ad4Z1dhYzH1Fsq8ayb6veUGxwtP1HAvfb4CtyQaP3p33BlfpLGJoiUDPN4sPIyN\nVciwtKyUQlMGJSyywyC27GIh9AVA/LQg7rZHgxX+Tu6HDrbx1wA0iPTVdew2foLY\n6CJRZRTrN7FRyx02KLg7VYX4R3+DH0trv4zogKZXAoGBAKL/EanCeNDK/Fmvpbf7\nHEWEKLo00INmlv+BxIG7F6WtjWKFZoITDoLxwGkp/6fLrPSqth3iMnEKFzfpMWtj\nWGEBxuzTjLij85n/wfDUC1CiEpG9QAe4aMyaJqQnBuOYQ9D8+MhZBqk1bxQx+SRQ\nvOCQwsbZ/1RDLjOv9KxS0WsC\n-----END PRIVATE KEY-----\n",
+  "client_email": "fen-mantra@voltaic-mantra-402407.iam.gserviceaccount.com",
+  "client_id": "112175505433549302936",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fen-mantra%40voltaic-mantra-402407.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
