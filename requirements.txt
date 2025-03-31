@@ -6,5 +6,5 @@ google-auth
 openpyxl
 pillow
 requests
-
+python == 3.6
 json
