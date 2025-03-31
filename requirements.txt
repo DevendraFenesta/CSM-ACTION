@@ -16,8 +16,10 @@ PyDrive  # Google Drive API
 oauth2client  # OAuth authentication for Google APIs  
 pydrive  
 google-colab  
-pandas==0.25.3
-numpy==1.18.5
+pandas==0.24.2
+numpy==1.16.5
 openpyxl==2.6.4
 xlrd==1.2.0
-re
+google-auth==1.34.0
+gspread==3.1.0
+
